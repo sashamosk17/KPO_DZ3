@@ -49,6 +49,7 @@ public class FileStorageService : IFileStorageService
         return storedFile;
     }
 
+
     /// <summary>
     /// Получает файл с диска по идентификатору.
     /// </summary>
@@ -65,6 +66,10 @@ public class FileStorageService : IFileStorageService
         var content = await File.ReadAllBytesAsync(metadata.FilePath);
         return (content, metadata.FileName);
     }
+
+
+
+
 
     /// <summary>
     /// Удаляет файл с диска и из памяти.

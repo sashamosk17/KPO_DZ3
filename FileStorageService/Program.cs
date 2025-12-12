@@ -8,7 +8,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddScoped<IFileStorageService, FileStorageService.Services.FileStorageService>();
+builder.Services.AddSingleton<IFileStorageService, FileStorageService.Services.FileStorageService>();
 
 
 var app = builder.Build();
